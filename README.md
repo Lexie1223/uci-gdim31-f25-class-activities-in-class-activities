@@ -1,7 +1,8 @@
 # in-class-activities
 ## Devlogs
 ### W1
-Write your W1 activity Devlog here.
+1. When I run the game, the camera doesnot follow the Cat. This because the camera is no longer a child of the Cat, so it doesnot inherit the cat’s movement and rotation.
+2. https://ra9xxx.itch.io/928
 
 ### W2
 Create future Devlog sub-headers with the three # symbols, then write your Devlogs below them.
