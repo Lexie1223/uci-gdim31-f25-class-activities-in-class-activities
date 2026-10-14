@@ -10,6 +10,7 @@
 3. The error told me that I was trying to use a float value as an int, so the data types did not match.
 
 ### W3
+table16
 1. activity1
    1. input: int, bool   output: string
    2. input: float   output: void
