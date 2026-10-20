@@ -18,6 +18,11 @@ table16
 2. activity2: A class is like a person, and Components are like different jobs a person can have. Member variables are the person's traits, like age and name. Methods are the things a person can do, like teaching or helping others.
 3. activity3: Because every time the ball bounces, its color values increase. After bouncing many times, the color values become very high, making the ball extremely bright.
 
+### W4
+table16
+1. I added Rigidbodies to the Cat and SoccerBall so they could move and interact with each other. I checked IsTrigger on the Goal so the ball could pass through it and also through it multiple times, and the game could detect each goal.
+2. At first, the game did not work perfectly. I had to check the colliders and connect the missing components in the Inspector. After fixing them, the cat could kick the ball and the goal detection worked.
+
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
