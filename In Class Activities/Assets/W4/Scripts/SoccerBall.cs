@@ -7,7 +7,8 @@ public class SoccerBall : MonoBehaviour
     [SerializeField] private TMP_Text _pointsText;
     [SerializeField] private TMP_Text _timeText;
     [SerializeField] private ParticleSystem _goalVFX;
-
+    private int _points = 0;
+    private float _timeSinceLastGoal = 0.0f;
     // STEP 1 -----------------------------------------------------------------
     // The OnTriggerEnter method is a collision method called by Unity that
     //      tells our object when it's hit a collider with Is Trigger checked.
@@ -20,12 +21,20 @@ public class SoccerBall : MonoBehaviour
     // You'll also need to have all of your colliders set up properly in the Scene ;)
     //
     // Also, uncomment and FIX the Debug.Log line.
+    private void Update()
+    {
+        _timeSinceLastGoal += Time.deltaTime;
+        _timeText.text = "Time Since Last Goal: " + _timeSinceLastGoal.ToString("F2");
+    }
 
-    //private ?? ??
-    //{
+    private void OnTriggerEnter(Collider other)
+    {
         // finish STEP 1 by uncommenting and fixing the below line!
-        //Debug.Log(SoccerBall detected a collision with a trigger collider!);
-
+        if (other.CompareTag("Goal"))
+        {
+            MadeGoal();
+        }
+    }
         // STEP 2 -------------------------------------------------------------
         // Write an IF STATEMENT to check if the game object we collided with
         //      has the tag "Goal".
@@ -45,7 +54,14 @@ public class SoccerBall : MonoBehaviour
     // Next, we're going to make a method named MadeGoal to call if the
     //      SoccerBall collided with an object tagged "Goal".
     // MadeGoal RETURNS NOTHING, and has NO INPUT.
-    // 
+    private void MadeGoal()
+        {
+        Debug.Log("SoccerBall detected a collision with a trigger collider!");
+        _goalVFX.Play();
+        _points += 1;
+        _pointsText.text = "Points: " + _points.ToString();
+        _timeSinceLastGoal = 0.0f;
+        }
     // Once you've created MadeGoal,
     //      move your Debug.Log() statement into MadeGoal, and
     //      call MadeGoal from inside your if statement in OnTriggerEnter.
