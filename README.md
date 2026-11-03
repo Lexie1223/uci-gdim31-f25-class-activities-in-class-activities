@@ -23,6 +23,11 @@ table16
 1. I added Rigidbodies to the Cat and SoccerBall so they could move and interact with each other. I checked IsTrigger on the Goal so the ball could pass through it and also through it multiple times, and the game could detect each goal.
 2. At first, the game did not work perfectly. I had to check the colliders and connect the missing components in the Inspector. After fixing them, the cat could kick the ball and the goal detection worked.
 
+### W5
+table16
+I think I need a Transform variable for the target and a NavMeshAgent to move the deer. I can use Start() because I want deer to move when the game starts. In Start(), use GetComponent to get the NavMeshAgent and let the deer where to go.
+I discussed the code with my partner Jelena。
+
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
