@@ -24,7 +24,9 @@ table16
 2. At first, the game did not work perfectly. I had to check the colliders and connect the missing components in the Inspector. After fixing them, the cat could kick the ball and the goal detection worked.
 
 ### W5
+table16
 I think I need a Transform variable for the target and a NavMeshAgent to move the deer. I can use Start() because I want deer to move when the game starts. In Start(), use GetComponent to get the NavMeshAgent and let the deer where to go.
+I discussed the code with my partner Jelena。
 
 ## Open-Source Assets
 ### W1
