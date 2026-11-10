@@ -23,10 +23,18 @@ table16
 1. I added Rigidbodies to the Cat and SoccerBall so they could move and interact with each other. I checked IsTrigger on the Goal so the ball could pass through it and also through it multiple times, and the game could detect each goal.
 2. At first, the game did not work perfectly. I had to check the colliders and connect the missing components in the Inspector. After fixing them, the cat could kick the ball and the goal detection worked.
 
-### W5
+### W6
 table16
 I think I need a Transform variable for the target and a NavMeshAgent to move the deer. I can use Start() because I want deer to move when the game starts. In Start(), use GetComponent to get the NavMeshAgent and let the deer where to go.
-I discussed the code with my partner Jelena。
+I discussed the code with my partner Jelena.
+
+### w7
+My assigned category was othertools.   
+our group link: https://docs.google.com/document/d/1W83E18EwXXSdkScO6OmRU6EeHu7ACjFLijvjSUNB8QA/edit?tab=t.9oex1o23ifyn
+1.Speed, the Cat's position and a bool to check if the bat is chasing
+2. Start() and Update() from Unity, and two methods I write myself: StartChasing() and StopChasing().
+3. Start() makes the bat chase the Cat for testing. Update() moves the bat toward the Cat and StartChasing() makes the bat start chasing. StopChasing() makes it stop.
+
 
 ## Open-Source Assets
 ### W1
