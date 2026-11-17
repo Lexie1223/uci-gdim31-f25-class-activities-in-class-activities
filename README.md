@@ -37,6 +37,11 @@ partner: Jelena Song
 2. Start() and Update() from Unity, and two methods I write myself: StartChasing() and StopChasing().
 3. Start() makes the bat chase the Cat for testing. Update() moves the bat toward the Cat and StartChasing() makes the bat start chasing. StopChasing() makes it stop.
 
+### w8
+table16
+<img width="2560" height="1407" alt="image" src="https://github.com/user-attachments/assets/6f870a9c-4d47-44af-980d-17c66389dee3" />
+
+In Step 2, the problem was that I used Vector3.forward, so the Muskrat would always move in the same direction even when it turned around. I changed it to transform.forward so it can move in the direction it is facing. This makes the movement work correctly when the Muskrat turns.
 
 ## Open-Source Assets
 ### W1
